@@ -20,15 +20,16 @@ React.useEffect(() => {
 console.log(videos);
     
   return (
-    <div className='flex'>
+    <div className='flex '>
         
         
         <SideBar />
-            
-      <h1 className="text-2xl font-bold">Welcome to MyTube</h1>
-      <Thumbnail/>
-      <Thumbnail/>
-      <Thumbnail/>          
+            <div className='flex flex-wrap gap-2'>
+
+      
+      {videos.map((video)=> <Thumbnail key={video.id} value={video} />)}
+            </div>
+              
     </div>
   )
 }
