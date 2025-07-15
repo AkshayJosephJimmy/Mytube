@@ -1,6 +1,7 @@
 import React, {  useState } from 'react';
 import { useContext } from 'react';
 import { SideBarContext } from '../utils/toggelContext';
+import { Link } from 'react-router-dom';
 
 function Header(){
 
@@ -14,8 +15,8 @@ function Header(){
         <h1>Mytube</h1>
         <input type="text" className="border"></input>
         <ul className="flex space-x-4">
-            <li>Home</li>
-            <li>Trending</li>
+            <Link to={'/'}>Home</Link>
+            
             <li>Sign in</li>
             <li>account</li>
         </ul>
