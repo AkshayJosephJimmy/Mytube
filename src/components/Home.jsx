@@ -27,7 +27,7 @@ console.log(videos);
             <div className='flex flex-wrap gap-2'>
 
       
-      {videos.map((video)=> <Thumbnail key={video.id} value={video} />)}
+      {videos.map((video)=> <Thumbnail key={video.id} video={video} />)}
             </div>
               
     </div>
