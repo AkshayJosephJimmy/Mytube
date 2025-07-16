@@ -4,10 +4,13 @@ import Home from './components/Home'
 import { SideBarPovider,SideBarContext } from './utils/toggelContext'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import WatchView from './components/WatchView'
+import { Provider } from 'react-redux'
+ import myStore from './utils/mytubeStore'
 
 
 function App() {
   return (
+    <Provider store={myStore}>
     <BrowserRouter>
       <SideBarPovider>
        <Header/>
@@ -19,6 +22,7 @@ function App() {
       
       </SideBarPovider>
     </BrowserRouter>
+    </Provider>
   )
 }
 
