@@ -28,7 +28,7 @@ dispatch(fetchVideos());
             <div className='flex flex-wrap gap-2'>
 
       
-      {videos.map((video)=> <Thumbnail key={video.id} video={video} />)}
+      {videos.map((video)=> <Thumbnail key={video._id} video={video} />)}
             </div>
               
     </div>

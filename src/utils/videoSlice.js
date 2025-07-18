@@ -4,9 +4,9 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 const api_key='AIzaSyChybMFGahJyBPOveab8QHXw9m9MMVZ7-w';
 const api_url=`https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&chart=mostPopular&maxResults=20&regionCode=IN&key=${api_key}`;
    export const fetchVideos=  createAsyncThunk('video/fetchVideos', async () => {
-        const res = await fetch(api_url);
+        const res = await fetch('http://localhost:5050/api/videos');
         const data = await res.json();
-        return data.items;
+        return data.videos;
       });
 
 const video=createSlice({
