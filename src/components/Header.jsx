@@ -30,7 +30,7 @@ function Header(){
         <ul className="flex space-x-4">
             <Link to={'/'}><IoMdHome className='size-7'/></Link>
             
-            <li><MdOutlineAccountCircle className="size-7 " /><span>sign in</span></li>
+            <Link to={'/signin'}><MdOutlineAccountCircle className="size-7 " /><span>sign in</span></Link>
             
         </ul>
        </div>

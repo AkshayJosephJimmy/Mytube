@@ -2,6 +2,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import { videosApi } from './routes/videos.routes.js';
 import cors from 'cors';
+import { usersApi } from './routes/users.routes.js';
+
 
 const app = express();
 
@@ -19,6 +21,7 @@ mongoose.connect('mongodb+srv://akshayjosephjimmy05:69Osc0N9POrSaObh@cluster0.ez
 app.use(cors());
 app.use(express.json());
 videosApi(app);
+usersApi(app);
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
