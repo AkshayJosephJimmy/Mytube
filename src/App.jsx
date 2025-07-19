@@ -8,6 +8,8 @@ import { Provider } from 'react-redux'
  import myStore from './utils/mytubeStore.js'
  import SignIn from './components/SignIn.jsx'
 import Register from './components/Register.jsx'
+import SearchBar from './components/SearchBar.jsx'
+import SearchResults from './components/SearchResult.jsx'
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
         <Route path="/watch/:id" element={<WatchView/>} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/register" element={<Register/>}/>
+        <Route path="/search" element={<SearchResults/>}/>
         
        </Routes>
       

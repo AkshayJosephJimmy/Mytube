@@ -1,8 +1,10 @@
 import express from 'express';
-import mongoose from 'mongoose';
+import mongoose, { get } from 'mongoose';
 import { videosApi } from './routes/videos.routes.js';
 import cors from 'cors';
 import { usersApi } from './routes/users.routes.js';
+import { getSigninRoutes } from './routes/signin.routes.js';
+import { getSearchRoutes } from './routes/search.routes.js';
 
 
 const app = express();
@@ -22,6 +24,8 @@ app.use(cors());
 app.use(express.json());
 videosApi(app);
 usersApi(app);
+getSigninRoutes(app);
+getSearchRoutes(app);
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

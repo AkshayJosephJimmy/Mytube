@@ -1,10 +1,10 @@
-import { signin } from "../controllers/signin.controllers";
+import { signin } from "../controllers/signin.controllers.js";
 
 
 
 
 
-function getSigninRoutes(app) {
+ export function getSigninRoutes(app) {
 app.post('/api/signin',signin )
 
 }

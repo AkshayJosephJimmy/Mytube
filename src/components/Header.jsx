@@ -6,11 +6,16 @@ import { IoReorderThree } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci";
 import { IoMdHome } from "react-icons/io";
 import { MdOutlineAccountCircle } from "react-icons/md";
+import { useSelector } from 'react-redux';
+import SearchBar from './SearchBar';
 
 
 function Header(){
 
     const {isSideBar,toggleSideBar}=useContext(SideBarContext);
+    const user=useSelector((state) => state.auth.user);
+    const isSignedIn=!!user
+    
     
 
 
@@ -24,13 +29,14 @@ function Header(){
         </div>
         <div className='flex'>
 
-        <input type="text" className=" border rounded-md p-0.5" placeholder='search'></input>
+        {/*<input type="text" className=" border rounded-md p-0.5" placeholder='search'></input>*/}
+        <SearchBar/>
         <CiSearch className="size-7 text-black " />
         </div>
         <ul className="flex space-x-4">
             <Link to={'/'}><IoMdHome className='size-7'/></Link>
             
-            <Link to={'/signin'}><MdOutlineAccountCircle className="size-7 " /><span>sign in</span></Link>
+            <Link to={'/signin'}><MdOutlineAccountCircle className="size-7 " />{isSignedIn?`${user.username}`:<span>sign in</span>}</Link>
             
         </ul>
        </div>
