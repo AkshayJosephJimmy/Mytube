@@ -45,7 +45,7 @@ const curretVideo=videos.find((vid) => vid._id == useParams().id);
            
         </div>
 
-        <Comments/>
+        <Comments videoId={curretVideo._id}/>
       
     </div>
   )

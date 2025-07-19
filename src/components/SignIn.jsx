@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { setUser } from '../utils/AuthContext';
 import { useDispatch } from 'react-redux';
+import { setToken } from '../utils/AuthContext';
+
 
 function SignIn() {
   const dispatch = useDispatch();
@@ -25,6 +27,7 @@ function SignIn() {
     });
     const data= await res.json();
     dispatch(setUser(data.user));
+    dispatch(setToken(data.token));
     if (res.ok) {
       localStorage.setItem('user', JSON.stringify(data.user));
       localStorage.setItem('token', data.token);

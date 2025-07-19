@@ -19,7 +19,7 @@ function SideBar() {
         <li className={`p-2 hover:bg-gray-200 m-3 mb-6 ${isSideBar ?`flex flex-row`:`flex flex-col items-center justify-center text-center`}`}><IoIosTrendingUp className='size-6' /><span className='text-xs'>Trending</span></li>
         <li className={`p-2 hover:bg-gray-200 m-3 mb-6 ${isSideBar ?`flex flex-row`:`flex flex-col items-center justify-center text-center`}`}><MdSubscriptions className='size-6'/><span className='text-xs'>Subscripton</span></li>
         <li className={`p-2 hover:bg-gray-200 m-3 mb-6 ${isSideBar ?`flex flex-row`:`flex flex-col items-center justify-center text-center`}`}><MdOutlineVideoLibrary className='size-6'/><span className='text-xs'>Library</span></li>
-        <li className={`p-2 hover:bg-gray-200 m-3 ${isSideBar ?`flex flex-row`:`flex flex-col items-center justify-center text-center`}`}><MdOutlineAccountCircle className='size-6'/><span className='text-xs'>Account</span></li>
+        
         
       </ul>
     </div>

@@ -10,16 +10,18 @@ import { Provider } from 'react-redux'
 import Register from './components/Register.jsx'
 import SearchBar from './components/SearchBar.jsx'
 import SearchResults from './components/SearchResult.jsx'
+import { useLocation } from 'react-router-dom';
 
 
 function App() {
+  
   return (
     <Provider store={myStore}>
     <BrowserRouter>
       <SideBarPovider>
        <Header/>
        <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home  key={location.key}/>} />
         <Route path="/watch/:id" element={<WatchView/>} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/register" element={<Register/>}/>

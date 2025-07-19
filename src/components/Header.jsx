@@ -31,7 +31,7 @@ function Header(){
 
         {/*<input type="text" className=" border rounded-md p-0.5" placeholder='search'></input>*/}
         <SearchBar/>
-        <CiSearch className="size-7 text-black " />
+        
         </div>
         <ul className="flex space-x-4">
             <Link to={'/'}><IoMdHome className='size-7'/></Link>

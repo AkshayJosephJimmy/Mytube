@@ -5,6 +5,7 @@ import cors from 'cors';
 import { usersApi } from './routes/users.routes.js';
 import { getSigninRoutes } from './routes/signin.routes.js';
 import { getSearchRoutes } from './routes/search.routes.js';
+import { getCommentsRoutes } from './routes/comments.route.js';
 
 
 const app = express();
@@ -26,6 +27,7 @@ videosApi(app);
 usersApi(app);
 getSigninRoutes(app);
 getSearchRoutes(app);
+getCommentsRoutes(app);
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
